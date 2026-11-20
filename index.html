@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Townie List: trusted local businesses, town by town</title>
+<title>Townie List: Trusted Locally Owned Businesses Near You</title>
 <meta name="description" content="Townie List runs community directories of license-checked local pros. Now serving Eugene &amp; Springfield, Oregon - plumbing, HVAC and tree services.">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Townie List">
-<meta property="og:title" content="Townie List: trusted local businesses, town by town"><meta property="og:description" content="Townie List runs community directories of license-checked local pros. Now serving Eugene &amp; Springfield, Oregon - plumbing, HVAC and tree services."><meta property="og:url" content="https://townielist.com/">
+<meta property="og:title" content="Townie List: Trusted Locally Owned Businesses Near You"><meta property="og:description" content="Townie List runs community directories of license-checked local pros. Now serving Eugene &amp; Springfield, Oregon - plumbing, HVAC and tree services."><meta property="og:url" content="https://townielist.com/">
 <link rel="canonical" href="https://townielist.com/">
 <style>
-  :root { --bg:#f7f5f0; --ink:#1c2a33; --mut:#66707a; --accent:#154733; --star:#eab308; --line:#e5e0d3; --yellow:#fee123; --green:#26622f; --brand2:#26622f; }
+  :root { --bg:#f7f5f0; --ink:#1c2a33; --mut:#66707a; --star:#eab308; --line:#e5e0d3; --accent:#154733; --yellow:#fee123; --green:#26622f; --brand2:#26622f; }
   * { margin:0; padding:0; box-sizing:border-box; font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; }
   body { background:var(--bg); color:var(--ink); }
   a { color:var(--accent); }
@@ -91,6 +91,14 @@
     .wrap { max-width:1080px; }
   }
 
+  .svcmore { display:inline; }
+  .svcmore > summary { display:inline-block; cursor:pointer; list-style:none; -webkit-tap-highlight-color:transparent; }
+  .svcmore > summary::-webkit-details-marker { display:none; }
+  .svcmore > summary .ltxt { display:none; }
+  .svcmore[open] > summary .mtxt { display:none; }
+  .svcmore[open] > summary .ltxt { display:inline; }
+  .svcmore[open] { display:inline; }
+  .svcmore .svc { margin:2px 4px 2px 0; }
   .hero { background:var(--accent); color:#fff; padding:20px 0 18px; text-align:center; border-bottom:3px solid var(--yellow); }
   .hero h1 { font-size:20px; line-height:1.3; margin-bottom:4px; }
   .hero p { font-size:13px; opacity:.88; margin-bottom:13px; }
@@ -102,6 +110,11 @@
   .hero .near select { width:auto; padding:6px; font-size:12px; }
   .hero .near label { display:flex; align-items:center; gap:6px; }
   .hero button { background:var(--yellow); color:#17242e; border:none; border-radius:6px; padding:11px; font-weight:700; font-size:14.5px; }
+  .hero .tagline { font-size:13.5px; font-weight:700; color:var(--yellow); letter-spacing:.2px; margin-bottom:6px; }
+  .biz[data-chain="1"] { display:none; }
+  .chaintag { font-size:9.5px; font-weight:700; text-transform:uppercase; letter-spacing:.6px; color:#8d8672; border:1px solid #d8d2c0; border-radius:4px; padding:1px 6px; margin-left:6px; vertical-align:2px; }
+  .chaintog { display:flex; align-items:center; gap:6px; font-size:12px; color:var(--mut); margin:6px 0 2px; cursor:pointer; }
+  .chaintog input { width:auto; }
   .trust { display:flex; justify-content:center; gap:14px; margin-top:12px; font-size:11.5px; opacity:.85; }
   h2 { font-size:17px; margin-bottom:2px; }
   .sub { font-size:12px; color:var(--mut); margin-bottom:12px; }
@@ -136,10 +149,11 @@
 <div class="layout"><div class="main">
 <div class="hero"><div class="wrap">
 <h1>Find trusted local businesses,<br>town by town</h1>
+<div class="tagline">Trusted Locally Owned Businesses Near You</div>
 <p>Townie List runs community directories of license-checked local pros. Every listing is verified against public license records and live Google ratings - free to use, always.</p>
 </div></div>
 <div class="sec"><h2>Where we serve</h2><p class="sub">More regions are added as listings are verified.</p>
-<div class="tiles"><a class="tile" href="/eugene-springfield/">Eugene &amp; Springfield, Oregon<span class="n">51 pros - plumbing, hvac, tree services</span></a></div></div>
+<div class="tiles"><a class="tile" href="/eugene-springfield/">Eugene &amp; Springfield, Oregon<span class="n">51 pros - plumbing, HVAC, tree services</span></a></div></div>
 <div class="sec"><h2>How it works</h2><p class="sub">Why a listing here means more than a listing anywhere else.</p>
 <div class="steps">
 <div class="step"><div class="ic">1</div><h4>Search a trade</h4><p>Pick what you need and your city. Every listing has checked data and real reviews.</p></div>
@@ -149,7 +163,7 @@
 <div class="claim"><h3>Own a local business?</h3><p>Your business may already be listed in one of our regions. Claim your free listing to update your info and receive customer requests.</p><a href="/eugene-springfield/claim/">Claim your free listing</a></div>
 </div></div>
 </div>
-<footer>Townie List · Local directories, town by town - now serving Eugene &amp; Springfield<br>
+<footer>Townie List · Trusted Locally Owned Businesses Near You · Now serving Eugene &amp; Springfield<br>
 Ratings and review counts are from Google and checked weekly. Business data verified against Oregon CCB license records.<br>
 Listings are free and cannot be bought. Labeled sponsored slots are the only paid placement.</footer>
 
