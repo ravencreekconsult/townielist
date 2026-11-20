@@ -1,0 +1,8 @@
+# Townie List source data
+
+Snapshot of the exact inputs used for the current build. Public data, mirrored for reproducibility.
+
+- Overture Maps places, release 2026-11-18.0 (theme=places), Eugene-Springfield metro bbox -123.45..-122.75, 43.75..44.35. License CDLA-Permissive. Pulled 2026-11-18.
+- Oregon CCB license records: https://data.oregon.gov/api/views/g77e-6bhs/rows.csv (public). Pulled 2026-11-19; matched rows are merged into listings.json / bulk_listings.json (full 14 MB dump not mirrored; re-pull from source).
+- listings.json: original curated trades (plumbing, HVAC, tree services).
+- bulk_listings.json + bulk_candidates_clean.json: 7 new trades from the Overture+CCB bulk build approved 2026-11-19.
