@@ -8,3 +8,4 @@ Snapshot of the exact inputs used for the current build. Public data, mirrored f
 - bulk_listings.json + bulk_candidates_clean.json: 7 new trades from the Overture+CCB bulk build approved 2026-11-19.
 - auto_repair.json: independent auto repair, body, glass, tire and detailing shops from a full Lane County Overture pull (release 2026-11-18.0, bbox -124.2..-122.5, 43.55..44.30, 21,423 places, pulled 2026-11-20). Chains excluded; same-address former-name dupes resolved to the stronger record.
 - category_counts.tsv: full per-category place counts from that county pull - the supply side of category research.
+- restaurants.json: independent restaurants by cuisine from the same county pull (669 spots, 11 towns). Coffee/cafe and food-truck categories excluded (own directories); bars, wineries and dessert excluded (future categories). Chains dropped; same-address former-name dupes resolved; names already on the coffee page removed.
