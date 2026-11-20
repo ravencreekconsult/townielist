@@ -92,7 +92,7 @@
   }
 
   .mainnav { background:var(--accent); position:sticky; top:44px; z-index:5; }
-  .mainnav .wrap { display:flex; gap:2px; overflow-x:auto; padding:0 8px; -webkit-overflow-scrolling:touch; }
+  .mainnav .wrap { display:flex; gap:2px; overflow-x:auto; padding:0 8px; -webkit-overflow-scrolling:touch; mask-image:linear-gradient(90deg,#000 88%,transparent); -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent); }
   .mainnav a { color:#fff; text-decoration:none; font-size:12.5px; font-weight:700; padding:8px 9px; white-space:nowrap; }
   .mainnav a.cal { color:var(--yellow); }
   .calbanner { display:block; background:var(--accent); color:#fff; border-radius:10px; padding:14px 16px; text-decoration:none; margin-bottom:14px; }
@@ -171,10 +171,12 @@
   .evcalhead { display:flex; align-items:center; justify-content:space-between; margin-top:12px; }
   .evcalhead b { font-size:15px; }
   .evcalhead button { border:1px solid var(--line); background:#fff; border-radius:8px; font-size:16px; padding:4px 12px; cursor:pointer; }
-  .evvenues { display:flex; gap:6px; overflow-x:auto; padding:2px 0 8px; -webkit-overflow-scrolling:touch; }
+  .evvenues { display:flex; gap:6px; overflow-x:auto; padding:2px 0 8px; -webkit-overflow-scrolling:touch; mask-image:linear-gradient(90deg,#000 85%,transparent); -webkit-mask-image:linear-gradient(90deg,#000 85%,transparent); }
   .evvenues a { flex:0 0 auto; border:1px solid var(--line); border-radius:999px; background:#fff; padding:6px 12px; font-size:12.5px; font-weight:600; color:var(--accent); text-decoration:none; }
   .evnone { padding:24px 8px; text-align:center; color:var(--mut); font-size:14px; }
   .evcount { font-size:12.5px; color:var(--mut); margin:6px 0 0; }
+  @media (max-width:600px){ #evmore{ display:none; } #evmore.open{ display:block; } }
+  @media (min-width:601px){ #evfbtn{ display:none; } }
 </style>
 
 </head>
@@ -187,6 +189,12 @@
 <h1>Find trusted local businesses,<br>town by town</h1>
 <div class="tagline">Trusted Locally Owned Businesses Near You</div>
 <p>Townie List runs community directories of license-checked local pros. Every listing is verified against public license records - free to use, always.</p>
+<div class="search">
+<input placeholder="What do you need? (e.g. water heater)" aria-label="What do you need">
+<div class="r2"><select id="h-trade" aria-label="Trade"><option value="">All trades</option><option value="plumbing">Plumbing</option><option value="hvac">HVAC</option><option value="tree-services">Tree Services</option><option value="electrical">Electrical</option><option value="roofing">Roofing</option><option value="painting">Painting</option><option value="concrete">Concrete & Paving</option><option value="pest-control">Pest Control</option><option value="fencing">Fencing & Decks</option><option value="gutters">Gutters</option></select>
+<select aria-label="Area"><option>All areas</option><option>Eugene</option><option>Springfield</option></select></div>
+<button onclick="var t=document.getElementById('h-trade').value||'plumbing';location.href='/eugene-springfield/'+t+'/'">Search</button>
+</div>
 </div></div>
 <div class="sec"><h2>Where we serve</h2><p class="sub">More regions are added as listings are verified.</p>
 <div class="tiles"><a class="tile" href="/eugene-springfield/">Eugene &amp; Springfield, Oregon<span class="n">308 pros - plumbing, HVAC, tree services, electrical, roofing, painting, concrete & paving, pest control, fencing & decks, gutters</span></a></div>

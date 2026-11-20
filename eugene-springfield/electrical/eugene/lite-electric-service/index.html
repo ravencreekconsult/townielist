@@ -92,7 +92,7 @@
   }
 
   .mainnav { background:var(--accent); position:sticky; top:44px; z-index:5; }
-  .mainnav .wrap { display:flex; gap:2px; overflow-x:auto; padding:0 8px; -webkit-overflow-scrolling:touch; }
+  .mainnav .wrap { display:flex; gap:2px; overflow-x:auto; padding:0 8px; -webkit-overflow-scrolling:touch; mask-image:linear-gradient(90deg,#000 88%,transparent); -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent); }
   .mainnav a { color:#fff; text-decoration:none; font-size:12.5px; font-weight:700; padding:8px 9px; white-space:nowrap; }
   .mainnav a.cal { color:var(--yellow); }
   .calbanner { display:block; background:var(--accent); color:#fff; border-radius:10px; padding:14px 16px; text-decoration:none; margin-bottom:14px; }
@@ -171,10 +171,12 @@
   .evcalhead { display:flex; align-items:center; justify-content:space-between; margin-top:12px; }
   .evcalhead b { font-size:15px; }
   .evcalhead button { border:1px solid var(--line); background:#fff; border-radius:8px; font-size:16px; padding:4px 12px; cursor:pointer; }
-  .evvenues { display:flex; gap:6px; overflow-x:auto; padding:2px 0 8px; -webkit-overflow-scrolling:touch; }
+  .evvenues { display:flex; gap:6px; overflow-x:auto; padding:2px 0 8px; -webkit-overflow-scrolling:touch; mask-image:linear-gradient(90deg,#000 85%,transparent); -webkit-mask-image:linear-gradient(90deg,#000 85%,transparent); }
   .evvenues a { flex:0 0 auto; border:1px solid var(--line); border-radius:999px; background:#fff; padding:6px 12px; font-size:12.5px; font-weight:600; color:var(--accent); text-decoration:none; }
   .evnone { padding:24px 8px; text-align:center; color:var(--mut); font-size:14px; }
   .evcount { font-size:12.5px; color:var(--mut); margin:6px 0 0; }
+  @media (max-width:600px){ #evmore{ display:none; } #evmore.open{ display:block; } }
+  @media (min-width:601px){ #evfbtn{ display:none; } }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Electrician", "name": "Lite Electric Service", "url": "https://townielist.com/eugene-springfield/electrical/eugene/lite-electric-service/", "address": {"@type": "PostalAddress", "addressLocality": "Eugene", "addressRegion": "OR", "addressCountry": "US"}, "telephone": "(541) 688-8996"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://townielist.com/"}, {"@type": "ListItem", "position": 2, "name": "Eugene & Springfield", "item": "https://townielist.com/eugene-springfield/"}, {"@type": "ListItem", "position": 3, "name": "Electrical", "item": "https://townielist.com/eugene-springfield/electrical/"}, {"@type": "ListItem", "position": 4, "name": "Eugene", "item": "https://townielist.com/eugene-springfield/electrical/eugene/"}, {"@type": "ListItem", "position": 5, "name": "Lite Electric Service", "item": "https://townielist.com/eugene-springfield/electrical/eugene/lite-electric-service/"}]}</script>
 </head>
@@ -185,7 +187,7 @@
 <div class="layout"><div class="main">
 <div class="crumb"><a href="/eugene-springfield/electrical/">Electrical</a> / <a href="/eugene-springfield/electrical/eugene/">Eugene</a> / <b>Lite Electric Service</b></div>
 <div class="detail" style="padding-top:12px;">
-<div class="biz" data-slug="lite-electric-service" data-name="Lite Electric Service" data-city="Eugene" data-services="" data-rating="0.0" data-reviews="0" data-years="0" data-ccb="1"><div class="vstat no">Not verified</div><div class="bhead"><div><h3>Lite Electric Service</h3><div class="cat">Eugene · <span class="licv">✓ CCB verified</span> · #206168</div></div></div><div class="rating" style="color:var(--mut);font-weight:400;">No verified rating yet</div><div class="hrs"><span class="dot" style="background:#b9b2a0;"></span>Hours not verified yet <i>(shown once confirmed)</i></div><div class="bacts"><a class="c" href="tel:+15416888996">Call (541) 688-8996</a><a class="q" href="/eugene-springfield/quote/?biz=lite-electric-service">Request a quote</a></div></div>
+<div class="biz" data-slug="lite-electric-service" data-name="Lite Electric Service" data-city="Eugene" data-services="" data-rating="0.0" data-reviews="0" data-years="0" data-ccb="1"><div class="bhead"><div><h3>Lite Electric Service</h3><div class="cat">Eugene · <span class="licv">✓ License verified (CCB)</span> · #206168</div></div></div><div class="rating" style="color:var(--mut);font-weight:400;">No verified rating yet</div><div class="hrs"><span class="dot" style="background:#b9b2a0;"></span>Hours not verified yet <i>(shown once confirmed)</i></div><div class="bacts"><a class="c" href="tel:+15416888996">Call (541) 688-8996</a><a class="q" href="/eugene-springfield/quote/?biz=lite-electric-service">Request a quote</a></div></div>
 <div class="biz">
 <div class="drow"><b>Trade</b><span>Electrical</span></div>
 <div class="drow"><b>Area</b><span>Eugene, Oregon</span></div>
