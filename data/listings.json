@@ -25,7 +25,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "1880 City View St",
+  "lat": 44.039439,
+  "lon": -123.128194
  },
  {
   "name": "True North Tree Care Inc.",
@@ -48,7 +51,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "92193 Whitmore St",
+  "lat": 44.172273,
+  "lon": -122.861188
  },
  {
   "name": "Holcomb Timber & Tree Services LLC",
@@ -172,7 +178,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "1235 Ocean St",
+  "lat": 44.046337,
+  "lon": -123.160964
  },
  {
   "name": "Brothers Plumbing Inc",
@@ -195,7 +204,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "575 W Oregon Ave #445",
+  "lat": 43.917345,
+  "lon": -123.025484
  },
  {
   "name": "Benchmark Plumbing LLC",
@@ -220,7 +232,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "40029 Reuben Leigh Rd",
+  "lat": 43.95319,
+  "lon": -122.77818
  },
  {
   "name": "Alpha Plumbing & Rooter Service LLC",
@@ -243,7 +258,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "1090 Bailey Hill Rd Ste E",
+  "lat": 44.049062,
+  "lon": -123.14869
  },
  {
   "name": "M.R. Tree Service",
@@ -274,7 +292,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "199 E 10th Ave",
+  "lat": 44.222607,
+  "lon": -123.200975
  },
  {
   "name": "Collins Tree Service LLC",
@@ -449,7 +470,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "2196 DEVOS St",
+  "lat": 44.089097,
+  "lon": -123.181156
  },
  {
   "name": "Fox Hollow ArborCare",
@@ -509,7 +533,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "1370 S Bertelsen Rd",
+  "lat": 44.044154,
+  "lon": -123.162454
  },
  {
   "name": "Action Drain LLC-Plumbing Eugene",
@@ -538,7 +565,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "4065 W 11th Ave #19",
+  "lat": 44.048656,
+  "lon": -123.15533
  },
  {
   "name": "Drain Raider Rooter Service Inc.",
@@ -570,7 +600,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "3979 W 12th Ave",
+  "lat": 44.047208,
+  "lon": -123.157343
  },
  {
   "name": "Mayday Plumbing Co.",
@@ -600,7 +633,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "2950 Allane Ln",
+  "lat": 44.07291,
+  "lon": -123.141637
  },
  {
   "name": "Arbor Barber Tree Service",
@@ -679,7 +715,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "87666 Trek Dr",
+  "lat": 44.036866,
+  "lon": -123.345877
  },
  {
   "name": "Lutz Tree Service",
@@ -707,7 +746,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "2149 Willona Dr",
+  "lat": 44.08923,
+  "lon": -123.080292
  },
  {
   "name": "Timber Valley Tree Service",
@@ -760,7 +802,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "3498 W 1st Ave",
+  "lat": 44.058355,
+  "lon": -123.152187
  },
  {
   "name": "Christian\u2019s Plumbing",
@@ -961,7 +1006,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "37739 Kimball Rd",
+  "lat": 43.921029,
+  "lon": -122.864981
  },
  {
   "name": "Wild Geese Tree Care",
@@ -993,7 +1041,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "25441 Hall Rd",
+  "lat": 44.181735,
+  "lon": -123.343348
  },
  {
   "name": "Alpine Tree Service, LLC",
@@ -1125,7 +1176,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "3498 W 1st Ave",
+  "lat": 44.05823,
+  "lon": -123.152168
  },
  {
   "name": "AMBIENT HEATING AND COOLING, LLC",
@@ -1297,7 +1351,10 @@
   "claimed": false,
   "plan_tier": "free",
   "lead_status": "unverified",
-  "ratings_checked": "checked Nov 19"
+  "ratings_checked": "checked Nov 19",
+  "street_address": "1395 Cross St #19",
+  "lat": 44.062068,
+  "lon": -123.113872
  },
  {
   "name": "AIRMAX HVAC AND REFRIGERATION LLC",
