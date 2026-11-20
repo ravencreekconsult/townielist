@@ -221,7 +221,7 @@
     var showChains = chainTog && chainTog.checked;
     var vis=cards.filter(function(c){var d=c.dataset;
       if(!showChains && d.chain==='1') return false;
-      if(area!=='All'){
+      if(area!=='All towns' && area!=='All'){
         if(!d.city||!TOWNS[d.city]||!TOWNS[area]) return false;
         if(hav(TOWNS[area],TOWNS[d.city])>rad) return false;
       }
