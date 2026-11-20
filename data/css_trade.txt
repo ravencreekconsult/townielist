@@ -1,3 +1,4 @@
+
   :root { --bg:#f7f5f0; --ink:#1c2a33; --mut:#66707a; --accent:#154733; --star:#eab308; --line:#e5e0d3; --yellow:#fee123; --green:#26622f; --brand2:#26622f; }
   * { margin:0; padding:0; box-sizing:border-box; font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; }
   body { background:var(--bg); color:var(--ink); }
