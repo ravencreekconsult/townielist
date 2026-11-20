@@ -186,11 +186,40 @@
 <div class="crumb"><a href="/eugene-springfield/burgers/">Burgers</a> / <a href="/eugene-springfield/burgers/eugene/">Eugene</a> / <b>Bethel &amp; West Eugene</b></div>
 <div class="thead"><h1>Burger spots in Bethel &amp; West Eugene, Eugene</h1>
 <p>3 independent independent burger spots in the Bethel &amp; West Eugene area of Eugene, checked Nov 2026. Bethel and Churchill cover most of Eugene west of the railroad - 1960s-80s ranch homes, newer subdivisions near the Beltline, and the metro&#x27;s largest concentration of family housing.</p></div>
-<div class="biz"><div class="bhead"><div><h3>Fusion Burger</h3><div class="cat">Burgers · Eugene</div></div></div><div class="cat">977 Garfield St Ste 8</div><div class="bacts"><a class="c" href="tel:+14582211663">Call (458) 221-1663</a><a class="q" href="http://www.fusionburgereugene.com" rel="nofollow noopener">Website</a></div></div><div class="biz"><div class="bhead"><div><h3>Hemp House Grill</h3><div class="cat">Burgers · Eugene</div></div></div><div class="cat">Roaming</div><div class="bacts"><a class="c" href="tel:+15419142294">Call (541) 914-2294</a><a class="q" href="http://www.grillingplaces.com/" rel="nofollow noopener">Website</a></div></div><div class="spon-inline" id="adA"><div class="sponcard"><div class="shead"><b>US Ops IQ</b><span class="stag">Sponsored</span></div><div class="srow"><p><b style="color:var(--ink)">Increase your visibility and get found locally.</b><br>Local SEO &amp; Google Business Profile management, search-optimized websites, and citation management.</p><a href="https://usopsiq.info">Get found locally</a></div></div></div><div class="biz"><div class="bhead"><div><h3>Toxic Burger</h3><div class="cat">Burgers · Eugene</div></div></div><div class="cat">2766 W 11th Ave</div><div class="bacts"><a class="c" href="tel:+15412554345">Call (541) 255-4345</a><a class="q" href="https://www.toxicburger.com" rel="nofollow noopener">Website</a></div></div>
+<div class="biz" data-slug="Fusion Burger"><div class="bhead"><div><h3>Fusion Burger</h3><div class="cat">Burgers · Eugene</div></div></div><div class="cat">977 Garfield St Ste 8</div><div class="bacts"><a class="c" href="tel:+14582211663">Call (458) 221-1663</a><a class="q" href="http://www.fusionburgereugene.com" rel="nofollow noopener">Website</a></div></div><div class="biz" data-slug="Hemp House Grill"><div class="bhead"><div><h3>Hemp House Grill</h3><div class="cat">Burgers · Eugene</div></div></div><div class="cat">Roaming</div><div class="bacts"><a class="c" href="tel:+15419142294">Call (541) 914-2294</a><a class="q" href="http://www.grillingplaces.com/" rel="nofollow noopener">Website</a></div></div><div class="spon-inline" id="adA"><div class="sponcard" data-spn="US Ops IQ"><div class="shead"><b>US Ops IQ</b><span class="stag">Sponsored</span></div><div class="srow"><p><b style="color:var(--ink)">Increase your visibility and get found locally.</b><br>Local SEO &amp; Google Business Profile management, search-optimized websites, and citation management.</p><a href="https://usopsiq.info">Get found locally</a></div></div></div><div class="biz" data-slug="Toxic Burger"><div class="bhead"><div><h3>Toxic Burger</h3><div class="cat">Burgers · Eugene</div></div></div><div class="cat">2766 W 11th Ave</div><div class="bacts"><a class="c" href="tel:+15412554345">Call (541) 255-4345</a><a class="q" href="https://www.toxicburger.com" rel="nofollow noopener">Website</a></div></div>
 <div class="claimline"><a href="/eugene-springfield/claim/">Know a spot we missed in Bethel &amp; West Eugene? Suggest an edit</a></div>
 </div></div>
 <div class="reportline">See a problem with this page? <a href="/eugene-springfield/report/?from=/eugene-springfield/burgers/eugene-bethel-west-eugene/">Report it or suggest an edit</a> - we verify every change before it goes live.</div>
 </div>
+<script>
+(function(){
+var EP='https://instinct-townielist-metrics.ravencreek.workers.dev/e';
+function send(t,o){try{o=o||{};o.t=t;o.p=location.pathname;var b=JSON.stringify(o);if(navigator.sendBeacon)navigator.sendBeacon(EP,b);else fetch(EP,{method:'POST',body:b,keepalive:true,mode:'no-cors'});}catch(e){}}
+if(EP.indexOf('https')===0){
+send('pv');
+document.addEventListener('click',function(ev){
+ var b=ev.target&&ev.target.closest?ev.target.closest('button[data-s],button[data-v],button[data-p]'):null;
+ if(b){send('ev',{a:b.hasAttribute('data-s')?'scope':(b.hasAttribute('data-v')?'view':'preset'),v:b.getAttribute('data-s')||b.getAttribute('data-v')||b.getAttribute('data-p')});}
+ var a=ev.target&&ev.target.closest?ev.target.closest('a'):null;
+ if(!a)return;
+ var h=a.getAttribute('href')||'',act=null;
+ if(h.indexOf('tel:')===0)act='call';
+ else if(h.indexOf('/quote/')>-1)act='quote';
+ else if(h.indexOf('maps')>-1)act='directions';
+ else if(a.closest('[data-spn]'))act='sponsored';
+ else if(a.classList.contains('evsrc'))act='source';
+ else if(a.closest('.bacts'))act='website';
+ if(!act)return;
+ var c=a.closest('[data-slug],[data-spn]')||document.querySelector('[data-slug]')||null;
+ var pos='';
+ if(c&&c.hasAttribute('data-slug')){try{var vis=[].slice.call(document.querySelectorAll('.biz[data-slug]')).filter(function(x){return x.offsetParent!==null;});var ix=vis.indexOf(c);if(ix>-1)pos=String(ix+1);}catch(e){}}
+ send('click',{a:act,slug:c?(c.getAttribute('data-slug')||''):'',pos:pos,spn:c?(c.getAttribute('data-spn')||''):'',src:a.getAttribute('data-src')||''});
+},{passive:true});
+document.addEventListener('change',function(ev){var s=ev.target;if(s&&s.tagName==='SELECT'&&s.id&&s.id.indexOf('f-')===0)send('ev',{a:'filter',v:s.id+'='+s.value});},{passive:true});
+var sp=document.querySelectorAll('[data-spn]');if(sp.length){var ids=[];sp.forEach(function(x){ids.push(x.getAttribute('data-spn'));});send('imp',{spn:ids.join('|')});}
+}
+})();
+</script>
 <footer>Townie List · Trusted Locally Owned Businesses Near You · Now serving Eugene &amp; Springfield<br>
 Ratings and review counts are from Google and checked monthly. Business data verified against Oregon CCB license records.<br>
 Listings are free and cannot be bought. Labeled sponsored slots are the only paid placement.<br><span style="font-size:10px;opacity:.55;">Some listing data from Overture Maps (CDLA-Permissive).</span></footer>

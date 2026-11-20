@@ -186,11 +186,40 @@
 <div class="crumb"><a href="/eugene-springfield/burgers/">Burgers</a> / <a href="/eugene-springfield/burgers/eugene/">Eugene</a> / <b>River Road &amp; Santa Clara</b></div>
 <div class="thead"><h1>Burger spots in River Road &amp; Santa Clara, Eugene</h1>
 <p>3 independent independent burger spots in the River Road &amp; Santa Clara area of Eugene, checked Nov 2026. Post-war ranch homes and small acreage lots along River Road and out into Santa Clara - big yards, mature trees, and plenty of 1950s-70s systems reaching replacement age.</p></div>
-<div class="biz"><div class="bhead"><div><h3>DickieJo&#x27;s Burgers</h3><div class="cat">Burgers · Eugene</div></div></div><div class="cat">1079 Valley River Way</div><div class="bacts"><a class="c" href="tel:+15417434106">Call (541) 743-4106</a><a class="q" href="http://dickiejos.com/" rel="nofollow noopener">Website</a></div></div><div class="biz"><div class="bhead"><div><h3>The Burger House</h3><div class="cat">Burgers · Eugene</div></div></div><div class="cat">1025 Green Acres Rd</div><div class="bacts"><a class="c" href="tel:+15413443404">Call (541) 344-3404</a><a class="q" href="https://theburgerhouseeugene.com/" rel="nofollow noopener">Website</a></div></div><div class="spon-inline" id="adA"><div class="sponcard"><div class="shead"><b>US Ops IQ</b><span class="stag">Sponsored</span></div><div class="srow"><p><b style="color:var(--ink)">Increase your visibility and get found locally.</b><br>Local SEO &amp; Google Business Profile management, search-optimized websites, and citation management.</p><a href="https://usopsiq.info">Get found locally</a></div></div></div><div class="biz"><div class="bhead"><div><h3>Wayback Burgers</h3><div class="cat">Burgers · Eugene</div></div></div><div class="cat">45 Division Ave</div><div class="bacts"><a class="c" href="tel:+15416545293">Call (541) 654-5293</a><a class="q" href="https://waybackburgers.com/locations/oregon/eugene/" rel="nofollow noopener">Website</a></div></div>
+<div class="biz" data-slug="DickieJo&#x27;s Burgers"><div class="bhead"><div><h3>DickieJo&#x27;s Burgers</h3><div class="cat">Burgers · Eugene</div></div></div><div class="cat">1079 Valley River Way</div><div class="bacts"><a class="c" href="tel:+15417434106">Call (541) 743-4106</a><a class="q" href="http://dickiejos.com/" rel="nofollow noopener">Website</a></div></div><div class="biz" data-slug="The Burger House"><div class="bhead"><div><h3>The Burger House</h3><div class="cat">Burgers · Eugene</div></div></div><div class="cat">1025 Green Acres Rd</div><div class="bacts"><a class="c" href="tel:+15413443404">Call (541) 344-3404</a><a class="q" href="https://theburgerhouseeugene.com/" rel="nofollow noopener">Website</a></div></div><div class="spon-inline" id="adA"><div class="sponcard" data-spn="US Ops IQ"><div class="shead"><b>US Ops IQ</b><span class="stag">Sponsored</span></div><div class="srow"><p><b style="color:var(--ink)">Increase your visibility and get found locally.</b><br>Local SEO &amp; Google Business Profile management, search-optimized websites, and citation management.</p><a href="https://usopsiq.info">Get found locally</a></div></div></div><div class="biz" data-slug="Wayback Burgers"><div class="bhead"><div><h3>Wayback Burgers</h3><div class="cat">Burgers · Eugene</div></div></div><div class="cat">45 Division Ave</div><div class="bacts"><a class="c" href="tel:+15416545293">Call (541) 654-5293</a><a class="q" href="https://waybackburgers.com/locations/oregon/eugene/" rel="nofollow noopener">Website</a></div></div>
 <div class="claimline"><a href="/eugene-springfield/claim/">Know a spot we missed in River Road &amp; Santa Clara? Suggest an edit</a></div>
 </div></div>
 <div class="reportline">See a problem with this page? <a href="/eugene-springfield/report/?from=/eugene-springfield/burgers/eugene-river-road-santa-clara/">Report it or suggest an edit</a> - we verify every change before it goes live.</div>
 </div>
+<script>
+(function(){
+var EP='https://instinct-townielist-metrics.ravencreek.workers.dev/e';
+function send(t,o){try{o=o||{};o.t=t;o.p=location.pathname;var b=JSON.stringify(o);if(navigator.sendBeacon)navigator.sendBeacon(EP,b);else fetch(EP,{method:'POST',body:b,keepalive:true,mode:'no-cors'});}catch(e){}}
+if(EP.indexOf('https')===0){
+send('pv');
+document.addEventListener('click',function(ev){
+ var b=ev.target&&ev.target.closest?ev.target.closest('button[data-s],button[data-v],button[data-p]'):null;
+ if(b){send('ev',{a:b.hasAttribute('data-s')?'scope':(b.hasAttribute('data-v')?'view':'preset'),v:b.getAttribute('data-s')||b.getAttribute('data-v')||b.getAttribute('data-p')});}
+ var a=ev.target&&ev.target.closest?ev.target.closest('a'):null;
+ if(!a)return;
+ var h=a.getAttribute('href')||'',act=null;
+ if(h.indexOf('tel:')===0)act='call';
+ else if(h.indexOf('/quote/')>-1)act='quote';
+ else if(h.indexOf('maps')>-1)act='directions';
+ else if(a.closest('[data-spn]'))act='sponsored';
+ else if(a.classList.contains('evsrc'))act='source';
+ else if(a.closest('.bacts'))act='website';
+ if(!act)return;
+ var c=a.closest('[data-slug],[data-spn]')||document.querySelector('[data-slug]')||null;
+ var pos='';
+ if(c&&c.hasAttribute('data-slug')){try{var vis=[].slice.call(document.querySelectorAll('.biz[data-slug]')).filter(function(x){return x.offsetParent!==null;});var ix=vis.indexOf(c);if(ix>-1)pos=String(ix+1);}catch(e){}}
+ send('click',{a:act,slug:c?(c.getAttribute('data-slug')||''):'',pos:pos,spn:c?(c.getAttribute('data-spn')||''):'',src:a.getAttribute('data-src')||''});
+},{passive:true});
+document.addEventListener('change',function(ev){var s=ev.target;if(s&&s.tagName==='SELECT'&&s.id&&s.id.indexOf('f-')===0)send('ev',{a:'filter',v:s.id+'='+s.value});},{passive:true});
+var sp=document.querySelectorAll('[data-spn]');if(sp.length){var ids=[];sp.forEach(function(x){ids.push(x.getAttribute('data-spn'));});send('imp',{spn:ids.join('|')});}
+}
+})();
+</script>
 <footer>Townie List · Trusted Locally Owned Businesses Near You · Now serving Eugene &amp; Springfield<br>
 Ratings and review counts are from Google and checked monthly. Business data verified against Oregon CCB license records.<br>
 Listings are free and cannot be bought. Labeled sponsored slots are the only paid placement.<br><span style="font-size:10px;opacity:.55;">Some listing data from Overture Maps (CDLA-Permissive).</span></footer>
