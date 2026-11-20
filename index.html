@@ -91,6 +91,13 @@
     .wrap { max-width:1080px; }
   }
 
+  .mainnav { background:var(--accent); position:sticky; top:44px; z-index:5; }
+  .mainnav .wrap { display:flex; gap:2px; overflow-x:auto; padding:0 8px; -webkit-overflow-scrolling:touch; }
+  .mainnav a { color:#fff; text-decoration:none; font-size:12.5px; font-weight:700; padding:8px 9px; white-space:nowrap; }
+  .mainnav a.cal { color:var(--yellow); }
+  .calbanner { display:block; background:var(--accent); color:#fff; border-radius:10px; padding:14px 16px; text-decoration:none; margin-bottom:14px; }
+  .calbanner b { font-size:15.5px; }
+  .calbanner span { font-size:12.5px; opacity:.9; }
   .svcmore { display:inline; }
   .svcmore > summary { display:inline-block; cursor:pointer; list-style:none; -webkit-tap-highlight-color:transparent; }
   .svcmore > summary::-webkit-details-marker { display:none; }
@@ -147,6 +154,7 @@
 </head>
 <body data-badge="subtle">
 <div class="topbar"><div class="wrap row"><a class="brand" href="/" style="text-decoration:none;">Townie <span>List</span></a><input placeholder="Search pros, services..." aria-label="Search"></div></div>
+<div class="mainnav"><div class="wrap"><a href="/eugene-springfield/">Pros</a><a href="/eugene-springfield/restaurants/">Restaurants</a><a href="/eugene-springfield/coffee/">Coffee</a><a href="/eugene-springfield/food-trucks/">Food Trucks</a><a href="/eugene-springfield/events/" class="cal">Events Calendar</a><a href="/eugene-springfield/areas/">Areas</a></div></div>
 <div class="wrap">
 <div class="layout"><div class="main">
 <div class="hero"><div class="wrap">
@@ -155,7 +163,8 @@
 <p>Townie List runs community directories of license-checked local pros. Every listing is verified against public license records - free to use, always.</p>
 </div></div>
 <div class="sec"><h2>Where we serve</h2><p class="sub">More regions are added as listings are verified.</p>
-<div class="tiles"><a class="tile" href="/eugene-springfield/">Eugene &amp; Springfield, Oregon<span class="n">218 pros - plumbing, HVAC, tree services, electrical, roofing, painting, concrete & paving, pest control, fencing & decks, gutters</span></a></div></div>
+<div class="tiles"><a class="tile" href="/eugene-springfield/">Eugene &amp; Springfield, Oregon<span class="n">218 pros - plumbing, HVAC, tree services, electrical, roofing, painting, concrete & paving, pest control, fencing & decks, gutters</span></a></div>
+<p style="margin-top:10px;font-size:13.5px">In Eugene &amp; Springfield: <a href="/eugene-springfield/restaurants/">Restaurants</a> · <a href="/eugene-springfield/coffee/">Coffee</a> · <a href="/eugene-springfield/food-trucks/">Food trucks</a> · <a href="/eugene-springfield/events/"><b>Townie Calendar (local events)</b></a> · <a href="/eugene-springfield/areas/">All towns</a></p></div>
 <div class="sec"><h2>How it works</h2><p class="sub">Why a listing here means more than a listing anywhere else.</p>
 <div class="steps">
 <div class="step"><div class="ic">1</div><h4>Search a trade</h4><p>Pick what you need and your city. Every listing has checked data and real reviews.</p></div>
