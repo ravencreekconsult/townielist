@@ -133,6 +133,20 @@
   .tiles { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
   .tile { background:#fff; border:1px solid var(--line); border-radius:9px; padding:13px 8px; text-align:center; font-size:13.5px; font-weight:700; text-decoration:none; color:var(--ink); display:block; }
   .tile .n { display:block; font-weight:400; font-size:11.5px; color:var(--mut); margin-top:3px; }
+  .mtoggle > summary { cursor:pointer; font-size:12.5px; color:var(--accent); font-weight:600; margin-top:8px; list-style:none; }
+  .mtoggle > summary::after { content:' be'; }
+  .mtoggle[open] > summary::after { content:' b4'; }
+  .mtoggle > .tilebody { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:8px; }
+  @media (max-width:600px){
+    .tiles { grid-template-columns:repeat(2,1fr); gap:6px; }
+    .tile { padding:9px 6px; font-size:12.5px; }
+    .tile .n { font-size:10.5px; }
+    .mtoggle > .tilebody { grid-template-columns:repeat(2,1fr); gap:6px; margin-top:6px; }
+  }
+  @media (min-width:601px){
+    .mtoggle > summary { display:none; }
+    .mtoggle:not([open]) > .tilebody { display:grid; }
+  }
   .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
   .step { background:#fff; border:1px solid var(--line); border-radius:9px; padding:12px 9px; }
   .step .ic { width:24px; height:24px; border-radius:50%; background:var(--green); color:#fff; font-weight:800; font-size:12px; display:flex; align-items:center; justify-content:center; margin-bottom:7px; }
@@ -207,7 +221,7 @@
 </div>
 </div></div>
 <div class="sec"><h2>Where we serve</h2><p class="sub">More regions are added as listings are verified.</p>
-<div class="tiles"><a class="tile" href="/eugene-springfield/">Eugene &amp; Springfield, Oregon<span class="n">296 pros &middot; 48 directories</span></a><a class="tile" href="/central-coast/">Central Coast, Oregon<span class="n">54 pros &middot; 33 directories</span></a><a class="tile" href="/south-coast/">South Coast, Oregon<span class="n">87 pros &middot; 35 directories</span></a></div>
+<div class="tiles"><a class="tile" href="/eugene-springfield/">Eugene &amp; Springfield, Oregon<span class="n">294 pros &middot; 48 directories</span></a><a class="tile" href="/central-coast/">Central Coast, Oregon<span class="n">54 pros &middot; 29 directories</span></a><a class="tile" href="/south-coast/">South Coast, Oregon<span class="n">87 pros &middot; 30 directories</span></a></div>
 <p style="margin-top:10px;font-size:13.5px">In Eugene &amp; Springfield: <a href="/eugene-springfield/restaurants/">Restaurants</a> · <a href="/eugene-springfield/coffee/">Coffee</a> · <a href="/eugene-springfield/food-trucks/">Food trucks</a> · <a href="/eugene-springfield/events/"><b>Townie Calendar (local events)</b></a> · <a href="/eugene-springfield/areas/">All towns</a></p></div>
 <div class="spon-inline" id="adA"><div class="sponcard" data-spn="US Ops IQ"><div class="shead"><b>US Ops IQ</b><span class="stag">Sponsored</span></div><div class="srow"><p><b style="color:var(--ink)">Increase your visibility and get found locally.</b><br>Local SEO &amp; Google Business Profile management, search-optimized websites, and citation management.</p><a href="https://usopsiq.info">Get found locally</a></div></div></div>
 <div class="sec"><h2>How it works</h2><p class="sub">Why a listing here means more than a listing anywhere else.</p>
