@@ -303,7 +303,7 @@ function card(e, showDate){
     (meta ? '<div class="cat">'+escH(meta)+'</div>' : '')+
     (e.ad ? '<div class="cat">'+escH(e.ad)+' &middot; <a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(e.ad)+'" rel="nofollow noopener" style="color:var(--accent)">Map</a></div>' : '')+
     (e.u ? '<div class="cat">Source: <a class="evsrc" data-src="'+escH(e.src)+'" href="'+escH(e.u)+'" rel="nofollow noopener" style="color:var(--accent)">'+escH(e.src)+'</a></div>' : '')+
-    '<div class="bacts" style="margin-top:6px"><button type="button" class="shr" data-t="'+escH(e.t)+' - Townie List" onclick="return tlShare(this)">Share</button></div>'+
+    '<div class="bacts" style="margin-top:6px"><button type="button" class="shr" data-t="Look at this event I found on Townie List: '+escH(e.t)+'" onclick="return tlShare(this)">Share</button></div>'+
     '</div>';
 }
 function escH(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
