@@ -93,6 +93,9 @@
     .wrap { max-width:1080px; }
   }
 
+  .bacts .shr { flex:0 0 auto; background:#fff; border:1.5px solid #c8d2da; color:#5a6570; font-size:12px; font-weight:600; border-radius:7px; padding:10px 9px; text-align:center; cursor:pointer; font-family:inherit; line-height:1; }
+  .bacts .shr.copied { border-color:var(--accent); color:var(--accent); }
+
   .mainnav { background:var(--accent); position:sticky; top:44px; z-index:5; }
   .mainnav .wrap { display:flex; gap:2px; overflow-x:auto; padding:0 8px; -webkit-overflow-scrolling:touch; mask-image:linear-gradient(90deg,#000 88%,transparent); -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent); }
   #tfbtn{ display:none; border:1px solid var(--line); background:#fff; border-radius:999px; padding:6px 14px; font-size:12.5px; font-weight:600; color:var(--ink); cursor:pointer; margin:4px 0; }
@@ -218,7 +221,7 @@
 <div class="thead"><h1>Thrift &amp; secondhand stores in Gold Beach, Oregon</h1>
 <p>3 independent independent thrift and secondhand stores in Gold Beach, checked Nov 2026. Independents only.</p></div>
 
-<div class="biz" data-slug="Beyond Rejection Antiques"><div class="bhead"><div><h3>Beyond Rejection Antiques</h3><div class="cat">Thrift &amp; secondhand · Gold Beach</div></div></div><div class="cat">29775 Colvin St</div><div class="bacts"><a class="c" href="tel:+12094817360">Call (209) 481-7360</a><a class="q" href="http://cottonwoodjim.com/" rel="nofollow noopener">Website</a></div></div><div class="biz" data-slug="Christian Help Thrift Store"><div class="bhead"><div><h3>Christian Help Thrift Store</h3><div class="cat">Thrift &amp; secondhand · Gold Beach</div></div></div><div class="cat">29813 Colvin St</div><div class="bacts"><a class="c" href="tel:+15412474903">Call (541) 247-4903</a></div></div><div class="spon-inline" id="adA"><div class="sponcard" data-spn="Raven Creek Consult"><div class="shead"><b>Raven Creek Consult</b><span class="stag">Sponsored</span></div><div class="srow"><p>We find where your business loses time and money, then show you how to fix it.</p><a href="https://ravencreekconsult.com">Get your audit</a></div></div></div><div class="biz" data-slug="Wild Rivers Animal Rescue Thrift Store"><div class="bhead"><div><h3>Wild Rivers Animal Rescue Thrift Store</h3><div class="cat">Thrift &amp; secondhand · Gold Beach</div></div></div><div class="cat">29980 Ellensburg Ave</div><div class="bacts"><a class="c" href="tel:+15412476600">Call (541) 247-6600</a><a class="q" href="http://Wildriversanimalrescue.org/" rel="nofollow noopener">Website</a></div></div>
+<div class="biz" data-slug="Beyond Rejection Antiques"><div class="bhead"><div><h3>Beyond Rejection Antiques</h3><div class="cat">Thrift &amp; secondhand · Gold Beach</div></div></div><div class="cat">29775 Colvin St</div><div class="bacts"><a class="c" href="tel:+12094817360">Call (209) 481-7360</a><a class="q" href="http://cottonwoodjim.com/" rel="nofollow noopener">Website</a><button type="button" class="shr" data-t="Beyond Rejection Antiques - Townie List" onclick="return tlShare(this)">Share</button></div></div><div class="biz" data-slug="Christian Help Thrift Store"><div class="bhead"><div><h3>Christian Help Thrift Store</h3><div class="cat">Thrift &amp; secondhand · Gold Beach</div></div></div><div class="cat">29813 Colvin St</div><div class="bacts"><a class="c" href="tel:+15412474903">Call (541) 247-4903</a><button type="button" class="shr" data-t="Christian Help Thrift Store - Townie List" onclick="return tlShare(this)">Share</button></div></div><div class="spon-inline" id="adA"><div class="sponcard" data-spn="Raven Creek Consult"><div class="shead"><b>Raven Creek Consult</b><span class="stag">Sponsored</span></div><div class="srow"><p>We find where your business loses time and money, then show you how to fix it.</p><a href="https://ravencreekconsult.com">Get your audit</a></div></div></div><div class="biz" data-slug="Wild Rivers Animal Rescue Thrift Store"><div class="bhead"><div><h3>Wild Rivers Animal Rescue Thrift Store</h3><div class="cat">Thrift &amp; secondhand · Gold Beach</div></div></div><div class="cat">29980 Ellensburg Ave</div><div class="bacts"><a class="c" href="tel:+15412476600">Call (541) 247-6600</a><a class="q" href="http://Wildriversanimalrescue.org/" rel="nofollow noopener">Website</a><button type="button" class="shr" data-t="Wild Rivers Animal Rescue Thrift Store - Townie List" onclick="return tlShare(this)">Share</button></div></div>
 <div class="claimline"><a href="/south-coast/claim/">Know a spot we missed in Gold Beach? Suggest an edit</a></div>
 </div></div>
 <div class="reportline">See a problem with this page? <a href="/south-coast/report/?from=/south-coast/thrift-stores/gold-beach/">Report it or suggest an edit</a> - we verify every change before it goes live.</div>
@@ -251,6 +254,19 @@ document.addEventListener('change',function(ev){var s=ev.target;if(s&&s.tagName=
 var sp=document.querySelectorAll('[data-spn]');if(sp.length){var ids=[];sp.forEach(function(x){ids.push(x.getAttribute('data-spn'));});send('imp',{spn:ids.join('|')});}
 }
 })();
+</script>
+<script>
+function tlShare(b){
+  var card=b.closest('[data-slug]');
+  var url=location.href.split('#')[0];
+  if(card&&card.getAttribute('data-slug'))url+='#'+card.getAttribute('data-slug');
+  var t=b.getAttribute('data-t')||document.title;
+  function done(){var o=b.textContent;b.textContent='Copied';b.classList.add('copied');setTimeout(function(){b.textContent=o;b.classList.remove('copied')},1600)}
+  function fallback(){var ta=document.createElement('textarea');ta.value=url;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){}document.body.removeChild(ta)}
+  if(navigator.share){navigator.share({title:t,url:url}).catch(function(){})}
+  else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(done).catch(fallback)}
+  else{fallback()}
+}
 </script>
 <footer>Townie List · Now serving South Coast
 <div style="font-size:11.5px;margin:5px 0;"><a href="/about/" style="color:inherit;">About</a> · <a href="/about/data/" style="color:inherit;">Our data</a> · <a href="/south-coast/claim/" style="color:inherit;">Claim your listing</a> · <a href="/south-coast/report/" style="color:inherit;">Report an edit</a></div>

@@ -93,6 +93,9 @@
     .wrap { max-width:1080px; }
   }
 
+  .bacts .shr { flex:0 0 auto; background:#fff; border:1.5px solid #c8d2da; color:#5a6570; font-size:12px; font-weight:600; border-radius:7px; padding:10px 9px; text-align:center; cursor:pointer; font-family:inherit; line-height:1; }
+  .bacts .shr.copied { border-color:var(--accent); color:var(--accent); }
+
   .mainnav { background:var(--accent); position:sticky; top:44px; z-index:5; }
   .mainnav .wrap { display:flex; gap:2px; overflow-x:auto; padding:0 8px; -webkit-overflow-scrolling:touch; mask-image:linear-gradient(90deg,#000 88%,transparent); -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent); }
   #tfbtn{ display:none; border:1px solid var(--line); background:#fff; border-radius:999px; padding:6px 14px; font-size:12.5px; font-weight:600; color:var(--ink); cursor:pointer; margin:4px 0; }
@@ -216,7 +219,7 @@
 <div class="layout"><div class="main">
 <div class="crumb"><a href="/central-oregon/painting/">Painting</a> / <a href="/central-oregon/painting/prineville/">Prineville</a> / <b>Pretty House Painting And Handyman Llc</b></div>
 <div class="detail" style="padding-top:12px;">
-<div class="biz" data-slug="pretty-house-painting-and-handyman-llc" data-name="Pretty House Painting And Handyman Llc" data-city="Prineville" data-services="" data-rating="0.0" data-reviews="0" data-years="2" data-ccb="1"><div class="bhead"><div><h1>Pretty House Painting And Handyman Llc</h1><div class="cat">Prineville · <span class="licv">✓ License verified (CCB)</span> · 2 yrs · #250178</div></div></div><div class="rating" style="color:var(--mut);font-weight:400;">No verified rating yet</div><div class="hrs"><span class="dot" style="background:#b9b2a0;"></span>Hours not verified yet <i>(shown once confirmed)</i></div><div class="bacts"><a class="c" href="tel:+15418483274">Call (541) 848-3274</a></div></div>
+<div class="biz" data-slug="pretty-house-painting-and-handyman-llc" data-name="Pretty House Painting And Handyman Llc" data-city="Prineville" data-services="" data-rating="0.0" data-reviews="0" data-years="2" data-ccb="1"><div class="bhead"><div><h1>Pretty House Painting And Handyman Llc</h1><div class="cat">Prineville · <span class="licv">✓ License verified (CCB)</span> · 2 yrs · #250178</div></div></div><div class="rating" style="color:var(--mut);font-weight:400;">No verified rating yet</div><div class="hrs"><span class="dot" style="background:#b9b2a0;"></span>Hours not verified yet <i>(shown once confirmed)</i></div><div class="bacts"><a class="c" href="tel:+15418483274">Call (541) 848-3274</a><button type="button" class="shr" data-t="Pretty House Painting And Handyman Llc - Townie List" onclick="return tlShare(this)">Share</button></div></div>
 <div class="biz">
 <div class="drow"><b>Trade</b><span>Painting</span></div>
 <div class="drow"><b>Area</b><span>Prineville, Oregon</span></div>
@@ -261,6 +264,19 @@ document.addEventListener('change',function(ev){var s=ev.target;if(s&&s.tagName=
 var sp=document.querySelectorAll('[data-spn]');if(sp.length){var ids=[];sp.forEach(function(x){ids.push(x.getAttribute('data-spn'));});send('imp',{spn:ids.join('|')});}
 }
 })();
+</script>
+<script>
+function tlShare(b){
+  var card=b.closest('[data-slug]');
+  var url=location.href.split('#')[0];
+  if(card&&card.getAttribute('data-slug'))url+='#'+card.getAttribute('data-slug');
+  var t=b.getAttribute('data-t')||document.title;
+  function done(){var o=b.textContent;b.textContent='Copied';b.classList.add('copied');setTimeout(function(){b.textContent=o;b.classList.remove('copied')},1600)}
+  function fallback(){var ta=document.createElement('textarea');ta.value=url;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){}document.body.removeChild(ta)}
+  if(navigator.share){navigator.share({title:t,url:url}).catch(function(){})}
+  else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(done).catch(fallback)}
+  else{fallback()}
+}
 </script>
 <footer>Townie List · Now serving Central Oregon
 <div style="font-size:11.5px;margin:5px 0;"><a href="/about/" style="color:inherit;">About</a> · <a href="/about/data/" style="color:inherit;">Our data</a> · <a href="/central-oregon/claim/" style="color:inherit;">Claim your listing</a> · <a href="/central-oregon/report/" style="color:inherit;">Report an edit</a></div>

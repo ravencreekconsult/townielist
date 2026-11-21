@@ -93,6 +93,9 @@
     .wrap { max-width:1080px; }
   }
 
+  .bacts .shr { flex:0 0 auto; background:#fff; border:1.5px solid #c8d2da; color:#5a6570; font-size:12px; font-weight:600; border-radius:7px; padding:10px 9px; text-align:center; cursor:pointer; font-family:inherit; line-height:1; }
+  .bacts .shr.copied { border-color:var(--accent); color:var(--accent); }
+
   .mainnav { background:var(--accent); position:sticky; top:44px; z-index:5; }
   .mainnav .wrap { display:flex; gap:2px; overflow-x:auto; padding:0 8px; -webkit-overflow-scrolling:touch; mask-image:linear-gradient(90deg,#000 88%,transparent); -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent); }
   #tfbtn{ display:none; border:1px solid var(--line); background:#fff; border-radius:999px; padding:6px 14px; font-size:12.5px; font-weight:600; color:var(--ink); cursor:pointer; margin:4px 0; }
@@ -217,7 +220,7 @@
 <div class="crumb"><a href="/eugene-springfield/tire-shops/">Tire Shops</a> / <a href="/eugene-springfield/tire-shops/eugene/">Eugene</a> / <b>Bethel &amp; West Eugene</b></div>
 <div class="thead"><h1>Tire shops in Bethel &amp; West Eugene, Eugene</h1>
 <p>3 independent independent tire shops in the Bethel &amp; West Eugene area of Eugene, checked Nov 2026. Bethel and Churchill cover most of Eugene west of the railroad - 1960s-80s ranch homes, newer subdivisions near the Beltline, and the metro&#x27;s largest concentration of family housing.</p></div>
-<div class="biz" data-slug="Eugene Tire Center"><div class="bhead"><div><h3>Eugene Tire Center</h3><div class="cat">Tire shop · Eugene</div></div></div><div class="cat">515 Wilson St</div><div class="bacts"><a class="c" href="tel:+14582018602">Call (458) 201-8602</a></div></div><div class="biz" data-slug="TireSport"><div class="bhead"><div><h3>TireSport</h3><div class="cat">Tire shop · Eugene</div></div></div><div class="cat">1030 Wilson St</div><div class="bacts"><a class="c" href="tel:+15416545420">Call (541) 654-5420</a><a class="q" href="http://www.TireSport.com/" rel="nofollow noopener">Website</a></div></div><div class="spon-inline" id="adA"><div class="sponcard" data-spn="Raven Creek Consult"><div class="shead"><b>Raven Creek Consult</b><span class="stag">Sponsored</span></div><div class="srow"><p>We find where your business loses time and money, then show you how to fix it.</p><a href="https://ravencreekconsult.com">Get your audit</a></div></div></div><div class="biz" data-slug="Walmart Auto Care Centers"><div class="bhead"><div><h3>Walmart Auto Care Centers</h3><div class="cat">Tire shop · Eugene</div></div></div><div class="cat">4550 W 11th Ave</div><div class="bacts"><a class="c" href="tel:+15413442906">Call (541) 344-2906</a><a class="q" href="https://www.walmart.com" rel="nofollow noopener">Website</a></div></div>
+<div class="biz" data-slug="Eugene Tire Center"><div class="bhead"><div><h3>Eugene Tire Center</h3><div class="cat">Tire shop · Eugene</div></div></div><div class="cat">515 Wilson St</div><div class="bacts"><a class="c" href="tel:+14582018602">Call (458) 201-8602</a><button type="button" class="shr" data-t="Eugene Tire Center - Townie List" onclick="return tlShare(this)">Share</button></div></div><div class="biz" data-slug="TireSport"><div class="bhead"><div><h3>TireSport</h3><div class="cat">Tire shop · Eugene</div></div></div><div class="cat">1030 Wilson St</div><div class="bacts"><a class="c" href="tel:+15416545420">Call (541) 654-5420</a><a class="q" href="http://www.TireSport.com/" rel="nofollow noopener">Website</a><button type="button" class="shr" data-t="TireSport - Townie List" onclick="return tlShare(this)">Share</button></div></div><div class="spon-inline" id="adA"><div class="sponcard" data-spn="Raven Creek Consult"><div class="shead"><b>Raven Creek Consult</b><span class="stag">Sponsored</span></div><div class="srow"><p>We find where your business loses time and money, then show you how to fix it.</p><a href="https://ravencreekconsult.com">Get your audit</a></div></div></div><div class="biz" data-slug="Walmart Auto Care Centers"><div class="bhead"><div><h3>Walmart Auto Care Centers</h3><div class="cat">Tire shop · Eugene</div></div></div><div class="cat">4550 W 11th Ave</div><div class="bacts"><a class="c" href="tel:+15413442906">Call (541) 344-2906</a><a class="q" href="https://www.walmart.com" rel="nofollow noopener">Website</a><button type="button" class="shr" data-t="Walmart Auto Care Centers - Townie List" onclick="return tlShare(this)">Share</button></div></div>
 <div class="claimline"><a href="/eugene-springfield/claim/">Know a shop we missed in Bethel &amp; West Eugene? Suggest an edit</a></div>
 </div></div>
 <div class="reportline">See a problem with this page? <a href="/eugene-springfield/report/?from=/eugene-springfield/tire-shops/eugene-bethel-west-eugene/">Report it or suggest an edit</a> - we verify every change before it goes live.</div>
@@ -250,6 +253,19 @@ document.addEventListener('change',function(ev){var s=ev.target;if(s&&s.tagName=
 var sp=document.querySelectorAll('[data-spn]');if(sp.length){var ids=[];sp.forEach(function(x){ids.push(x.getAttribute('data-spn'));});send('imp',{spn:ids.join('|')});}
 }
 })();
+</script>
+<script>
+function tlShare(b){
+  var card=b.closest('[data-slug]');
+  var url=location.href.split('#')[0];
+  if(card&&card.getAttribute('data-slug'))url+='#'+card.getAttribute('data-slug');
+  var t=b.getAttribute('data-t')||document.title;
+  function done(){var o=b.textContent;b.textContent='Copied';b.classList.add('copied');setTimeout(function(){b.textContent=o;b.classList.remove('copied')},1600)}
+  function fallback(){var ta=document.createElement('textarea');ta.value=url;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){}document.body.removeChild(ta)}
+  if(navigator.share){navigator.share({title:t,url:url}).catch(function(){})}
+  else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(done).catch(fallback)}
+  else{fallback()}
+}
 </script>
 <footer>Townie List · Now serving Eugene & Springfield
 <div style="font-size:11.5px;margin:5px 0;"><a href="/about/" style="color:inherit;">About</a> · <a href="/about/data/" style="color:inherit;">Our data</a> · <a href="/eugene-springfield/claim/" style="color:inherit;">Claim your listing</a> · <a href="/eugene-springfield/report/" style="color:inherit;">Report an edit</a></div>
