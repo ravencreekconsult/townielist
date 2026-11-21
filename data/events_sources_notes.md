@@ -49,3 +49,30 @@
 - Cottage Theatre (cottagetheatre.org, Cottage Grove - registry town fixed from Eugene): static server-rendered. Homepage shows productions with date ranges ("December 4 - 20", "Tickets go on sale November 4"); per-production pages (e.g. /come-from-away.html) carry the performance dates/times. Adapter sketch: fetch homepage, extract production page links, fetch each, parse show datetimes (watch for matinee/evening time lists), venue "Cottage Theatre".
 - McDonald Theatre adapter (mcdonald_html in fetch_events.py): WORKING since Nov 20. Honors robots Crawl-delay: 10 and caches show times in mcdonald_cache.json - do not delete that file; without it every run re-fetches every event page at 10s each.
 - Cuthbert Amphitheater (cuthbert-curated): weekly, open mammothnw.com/venue/cuthbert-amphitheater/ in the cloud browser and hand-update cuthbert_curated.json. cuthbert.com is bot-blocked on every route tried.
+
+
+## 2026-11-20 (afternoon): Oregon Contemporary Theatre + Eugene Weekly added
+
+### Oregon Contemporary Theatre (key: octheatre, adapter: curated -> oct_curated.json)
+- Site 403s automated fetches; facts gathered via a normal browser session (Matthew-approved blocked-source workaround).
+- Current season: 3 productions, 9 performances Nov 20 - Dec 19, 2026. Showtimes from their ticketing pages
+  (app.arts-people.com/index.php?show=<id>) which DO respond to curl: See Jane Run (show 351376),
+  Oy Vey In A Manger (351377), A Charlie Brown Christmas (351378). OCT pages give date ranges only.
+- Refresh: browse https://www.octheatre.org/ for current productions, then curl each arts-people show page for
+  exact datetimes; rewrite oct_curated.json. allow_empty is set (between seasons).
+
+### Eugene Weekly (key: eugene-weekly, adapter: cityspark)
+- eugeneweekly.com/calendar is a CitySpark widget; robots.txt permissive; public JSON endpoint the page itself calls:
+  POST https://portal.cityspark.com/api/events/GetEventsByDay/EugeneWeekly
+  body {"ppid":10212,"lat":44.05,"lng":-123.09,"distance":30,"start":"YYYY-MM-DD","daysToLoad":1,"eventsPerDay":50}
+  ppid 10212 is the EugeneWeekly portal id (from cSparkLocals in the widget bundle). No auth.
+- Adapter loops day-by-day (eventsPerDay caps at 50; days with >50 events lose the tail - acceptable), 0.3s between
+  calls, keeps Lane County towns only, drops csVirtual/csRemote. Event url = PrimaryUrl (official organizer page);
+  falls back to the EW calendar URL. ~580 local events over 90 days (542 after cross-source dedupe).
+- Full fetch_events.py now runs ~2.5-3 min because of the day loop. ONLY_SOURCES=key1,key2 env var fetches a subset
+  and MERGES into events.json (keeps unfetched sources' events) - use for quick single-source refreshes.
+- The widget endpoint GetEvents/EugeneWeekly (no ByDay) returns national promoted filler unless ppid+lat/lng are sent;
+  even then it paginates oddly. GetEventsByDay is the reliable one.
+
+### Shared fix: dedupe key now (normalized title, start to the minute) instead of (title, date) -
+  was collapsing same-day double shows (e.g. OCT's Dec 19 2pm + 7:30pm Charlie Brown).
