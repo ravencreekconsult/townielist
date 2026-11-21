@@ -1,10 +1,11 @@
 # Townie List
-> Community directories of license-checked local pros, region by region. Live regions: Eugene & Springfield, Central Coast, South Coast, Oregon - licensed trades plus independent restaurants, coffee shops, services and a local events calendar in Eugene & Springfield.
+> Community directories of license-checked local pros, region by region. Live regions: Eugene & Springfield, Central Coast, South Coast, Central Oregon (Bend), Oregon - licensed trades plus independent restaurants, coffee shops, services and a local events calendar in Eugene & Springfield.
 > Listings are free; ratings come from Google and are checked monthly; licenses are verified against Oregon CCB records.
 
 - [Eugene & Springfield directory](https://townielist.com/eugene-springfield/)
 - [Central Coast directory](https://townielist.com/central-coast/)
 - [South Coast directory](https://townielist.com/south-coast/)
+- [Central Oregon (Bend) directory](https://townielist.com/central-oregon/)
 - [Plumbers in Eugene & Springfield](https://townielist.com/eugene-springfield/plumbing/)
 - [Heating & cooling pros in Eugene & Springfield](https://townielist.com/eugene-springfield/hvac/)
 - [Tree service pros in Eugene & Springfield](https://townielist.com/eugene-springfield/tree-services/)
